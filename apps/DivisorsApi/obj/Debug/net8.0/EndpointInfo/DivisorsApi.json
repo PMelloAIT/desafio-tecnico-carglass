@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Divisors API",
+    "description": "Serviço para decompor um número em seus divisores e divisores primos.",
+    "contact": {
+      "name": "Paulo Mello",
+      "email": "pmello@melloait.com.br"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "DivisorsApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/divisors/{n}": {
+      "get": {
+        "tags": [
+          "DivisorsApi"
+        ],
+        "summary": "Obtém divisores e divisores primos de um número.",
+        "description": "Calcula em O(√n) os divisores de **n** e os divisores que são primos. Inclui `1` na lista de primos para alinhar ao enunciado.",
+        "operationId": "GetDivisors",
+        "parameters": [
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

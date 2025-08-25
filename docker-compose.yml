@@ -1,0 +1,7 @@
+services:
+  divisors-api:
+    build:
+      context: ./apps/DivisorsApi
+    ports:
+      - "5181:8080"
+    restart: unless-stopped

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NumberTools</name>
+    </assembly>
+    <members>
+        <member name="T:NumberTools.DivisorsCalculator">
+            <summary>
+            Utilitário para cálculo de divisores e divisores primos.
+            Sem uso de bibliotecas externas de fatoração.
+            </summary>
+        </member>
+        <member name="M:NumberTools.DivisorsCalculator.GetDivisors(System.Int64)">
+            <summary>
+            Calcula todos os divisores de n (n >= 1), ordenados ascendente.
+            </summary>
+        </member>
+        <member name="M:NumberTools.DivisorsCalculator.GetPrimeDivisors(System.Int64,System.Boolean)">
+            <summary>
+            Calcula os divisores primos de n.
+            Por padrão inclui 1 (para obedecer o enunciado).
+            </summary>
+        </member>
+        <member name="M:NumberTools.DivisorsCalculator.IsPrime(System.Int64)">
+            <summary>
+            Teste de primalidade rápido (6k ± 1). O(√n).
+            </summary>
+        </member>
+    </members>
+</doc>
